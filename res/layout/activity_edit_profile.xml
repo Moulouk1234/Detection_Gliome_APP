@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditProfileActivity"
+    android:background="#FFFFFF"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:background="@color/white">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/back"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Profile Picture -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/imguser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/editProfileButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/penn"
+                    android:background="@drawable/circle_background"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="5dp"
+                    android:onClick="onEditProfilePictureClick"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/profilname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:text="Full name"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/editname"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/passedit"
+            android:hint="***********"
+            android:inputType="textPassword"
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/emailedit"
+            android:hint="example@example.com"
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/mobileedit"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Specialty"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/specialtyedit"
+            android:hint="Example: Neurosurgeon, Oncologist..."
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Profile Description"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/descedit"
+            android:hint="Describe your career path, experience, and achievements..."
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:maxLines="8"
+
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Starting Year of Career"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/yearstartedit"
+            android:hint="Enter year (e.g. 2015)"
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Workplace"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/workedit"
+            android:hint="Hospital or Clinic Name"
+            android:textColorHint="#0066FF"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/savechanges"
+            android:text="Save Changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0066FF"
+            android:textColor="@android:color/white"
+            android:radius="24dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>
